@@ -33,7 +33,7 @@ class VillagesTableSeeder extends Seeder
                         $commune_=App\Commune::firstOrNew(["nom"=>$commune->nom]);
                         $arrondissement_->communes()->save($commune_);
                         foreach ((array)$commune->village as $village) {
-                            if(App\Village::count()<25){
+                            if(App\Village::count()<50){
                             $village_=App\Village::firstOrNew(["nom"=>$village->nom]);
                             $commune_->villages()->save($village_);
 
@@ -59,9 +59,11 @@ class VillagesTableSeeder extends Seeder
                             //     "users_id"=>$gest_user->id
                             // ]);
 
-                            $gestionnaires_id=App\Gestionnaire::get()->pluck('id')->toArray();
-                            $randk=array_rand($gestionnaires_id, 1);
-                            $id_gest=$gestionnaires_id[$randk];
+                          //  $gestionnaires_id=App\Gestionnaire::get()->pluck('id')->toArray();
+                            $gestionnaires_id=App\Gestionnaire::get()->random->id;
+
+                          //  $randk=array_rand($gestionnaires_id, 1);
+                         //   $id_gest=$gestionnaires_id[$randk];
                             //echo("Pass 3".PHP_EOL);
                             $role_client=App\Role::where("name","Client")->first();
                             $user=App\User::firstOrNew(["name"=>$nom,"firstname"=>$prenom],
@@ -74,14 +76,16 @@ class VillagesTableSeeder extends Seeder
                             
                             $client=App\Client::firstOrNew([
                                 "matricule"=>$village->attributes->id
-                            ],["village_id"=>$village_->id,"users_id"=>$user->id,"gestionnaires_id"=>$id_gest]);
+                            ],["village_id"=>$village_->id,"users_id"=>$user->id,"gestionnaires_id"=>$gestionnaires_id]);
                             $client->save();
                             $village_->chef_id=$client->id;
-                            $village_->save();
+                               $village->save();
+                            
                             echo "-----village----".$village->nom."  id:".$village->attributes->id.PHP_EOL;
                             //echo("-----village:chef----".$village->chef.PHP_EOL);
                            // usleep(20000);
-                        }else{
+                        }
+                        else{
                             break 5;
                         }
                     }

@@ -2,8 +2,8 @@
   <ul class="nav">
     <li class="nav-item active  ">
       <a class="nav-link" href="./dashboard.html">
-        <i class="material-icons">dashboard</i>
-        <p>HOME</p>
+        <i class="material-icons"></i>
+        <p>ACCEUIL FORAGE MABO</p>
       </a>
     </li>
     <li class="nav-item ">
@@ -13,31 +13,31 @@
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="./user.html">
+      <a class="nav-link" href="{{route('clients.index')}}">
         <i class="material-icons">person</i>
         <p>Clients</p>
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="./user.html">
-        <i class="material-icons">person</i>
-        <p>Administrateurs</p>
-      </a>
-    </li>
-    <li class="nav-item ">
-      <a class="nav-link" href="./user.html">
+      <a class="nav-link" href="{{ route('comptables.index')}}">
         <i class="material-icons">person</i>
         <p>Comptables</p>
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="./tables.html">
+      <a class="nav-link" href="{{ route('administrateurs.index')}}">
+        <i class="material-icons">person</i>
+        <p>Administrateurs</p>
+      </a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="{{route('agents.index')}}">
         <i class="material-icons">content_paste</i>
         <p>Agents</p>
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="./typography.html">
+      <a class="nav-link" href="{{ route('gestionnaires.index')}}">
         <i class="material-icons">library_books</i>
         <p>Gestionnaires</p>
       </a>
@@ -49,7 +49,7 @@
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="./map.html">
+      <a class="nav-link" href="{{ asset('compteurs') }}">
         <i class="material-icons">location_ons</i>
         <p>Compteurs</p>
       </a>
@@ -60,16 +60,18 @@
         <p>Facturation</p>
       </a>
     </li>
-    <li class="nav-item ">
+    {{-- <li class="nav-item ">
       <a class="nav-link" href="./rtl.html">
         <i class="material-icons">language</i>
         <p>RTL Support</p>
       </a>
-    </li>
+    </li> --}}
     <li class="nav-item active-pro ">
       <a class="nav-link" href="./upgrade.html">
-        <i class="material-icons">unarchive</i>
-        <p>Upgrade to PRO</p>
+        <i class="material-icons"></i>
+      
+      
+        {{-- </p> --}}
       </a>
     </li>
   </ul>
