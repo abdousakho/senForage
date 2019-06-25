@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Administrateur;
 use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
 
 class AdministrateurController extends Controller
 {
