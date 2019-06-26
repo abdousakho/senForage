@@ -17,7 +17,7 @@ class CheckRoles
     {
         
             if (!$request->user()hasAnyRoles($rolesArray)){
-                return redirect()->('home')->(with;(['permission'=>Action nonautoriseé"]);
+                return redirect()->('home')->(with;(['permission'=>"Action nonautoriseé"]);
             }
     
             return $next($request);

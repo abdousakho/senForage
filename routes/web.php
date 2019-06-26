@@ -19,7 +19,7 @@ Route::get(' /compteurs/selectcompteurs',function() {
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('/test', function () {
     return view('layout.form');

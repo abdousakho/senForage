@@ -394,10 +394,10 @@
                             <td>Sign contract for "What are conference organizers afraid of?"</td>
                             <td class="td-actions text-right">
                               <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                                <i class="material-icons">edit</i>
+                                <i class="material-icons">modifier</i>
                               </button>
                               <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                                <i class="material-icons">close</i>
+                                <i class="material-icons">fermer</i>
                               </button>
                             </td>
                           </tr>

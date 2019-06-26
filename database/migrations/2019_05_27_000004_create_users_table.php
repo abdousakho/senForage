@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('email', 200)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $stable->rememberToken();
+            $table->rememberToken();
             $table->unsignedInteger('roles_id');
 
             $table->index(["roles_id"], 'fk_users_roles1_idx');

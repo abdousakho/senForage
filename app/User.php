@@ -8,6 +8,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * Class User
@@ -34,7 +37,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  *
  * @package App
  */
-class User extends Eloquent
+class User extends Authenticatable
 {
 	use \Illuminate\Database\Eloquent\SoftDeletes;use \App\Helpers\UuidForKey;
 
@@ -95,4 +98,5 @@ class User extends Eloquent
 	}
 	public function hasAnyRoles($role_name){
 		return in_array($this->role->name,$role_name);
+}
 }
