@@ -19,12 +19,12 @@
               </div>
               <div class="alert alert-info">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <i class="material-icons">close</i>
+                  <i class="material-icons">FERMER</i>
                 </button>
                 <span>This is a notification with close button.</span>
               </div>
               <div class="alert alert-info alert-with-icon" data-notify="container">
-                <i class="material-icons" data-notify="icon">add_alert</i>
+                <i class="material-icons" data-notify="icon">AJOUTER ALERTE</i>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <i class="material-icons">close</i>
                 </button>

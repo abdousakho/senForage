@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <title>LifeCoach &mdash; Website by Colorlib</title>
+    <title>BIENVEVUE AU FORAGE DE MABO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -21,7 +21,8 @@
 
     <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    {{-- {{asset('assets/js/plugins/bootstrap-tagsinput.js')}} --}}
     
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -43,20 +44,21 @@
       <div class="container">
         <div class="row align-items-center">
           
-          <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Life<span>Coach</span> <span class="text-primary">.</span> </a></h1>
-          </div>
+{{--           <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0"><span></span> <span class="text-primary"></span> </a></h1>
+          </div> --}}
 
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#about-section" class="nav-link">About</a></li>
-                <li><a href="#training-section" class="nav-link">Our Training</a></li>
-                <li><a href="#services-section" class="nav-link">Services</a></li>
-                <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                  <li><a class="nav-link"></a></li>
+                <li style="color:#fff;font-weight:bold"><a href="#home-section" class="nav-link">
+                </a>
+                <h4>AU SERVICE DE LA COMMUNNAUTE POUR UNE EAU SAINE ET DURABLE</h4></li>
+                <li><a href="#about-section" class="nav-link"></a></li>
+                <li><a href="#blog-section" class="nav-link"></a></li>
+                <li><a href="#contact-section" class="nav-link"></a></li>
               </ul>
             </nav>
           </div>
@@ -71,46 +73,25 @@
 
   
      
-    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" id="home-section">
+    <div class="site-blocks-cover overlay" style="background-image: url(assets/images/hero_1.jpg);" data-aos="fade" id="home-section">
       <div class="container">
         <div class="row">
 
           <div class="col-md-6 mt-lg-5 ml-auto text-left align-self-end align-self-md-center">
-            <h1>Professional Life Coaching</h1>
-            <p class="mb-4"><a href="#" class="btn btn-primary mr-2 mb-2">Get Started</a></p>
+            <h1>A VOTRE SERVICE</h1>
+            <p class="mb-4"><a href="{{ asset('/register') }}" class="btn btn-primary mr-2 mb-2">INCRIPTION</a></p>
+            <p class="mb-4"><a href="{{ asset('/login') }}" class="btn btn-primary mr-2 mb-2">se connecter</a></p> 
+            <p class="mb-4"><a href="#" class="btn btn-primary mr-2 mb-2">ACCEUILLE </a></p>
           </div>
             
         </div>
       </div>
     </div>  
 
-    <div class="site-section bg-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
-            <h2 class="text-white">Special Offers</h2>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex">
-            <div class="mr-3"><span class="flaticon-bill display-3 text-special"></span></div>
-            <div>
-              <h3 class="text-white h4">50% less of every purchase</h3>
-              <p class="text-special">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p><a href="#">Read more</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex">
-            <div class="mr-3"><span class="flaticon-customer-service display-3 text-special"></span></div>
-            <div>
-              <h3 class="text-white h4">More programs than ever before</h3>
-              <p class="text-special">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p><a href="#">Read more</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+    
 
-    <section class="site-section" id="about-section">
+    {{-- <section class="site-section" id="about-section">
       <div class="container">
         <div class="row mb-5">
           
@@ -128,9 +109,6 @@
         </div>
       </div>
     </section>
-  
-
-
     <div class="site-section bg-light" id="training-section">
       <div class="container">
         <div class="row mb-5">
@@ -216,10 +194,6 @@
         </div>
       </div>
     </div>
-
-    
-    
-    
     <section class="site-section border-bottom" id="team-section">
       <div class="container">
         <div class="row mb-5">
@@ -307,8 +281,6 @@
         </div>
       </div>
     </section>
-
-
     <section class="site-section">
       <div class="container">
         
@@ -356,9 +328,6 @@
         </div>
       </div>
     </section>
-
-    
-
     <section class="site-section border-bottom bg-light" id="services-section">
       <div class="container">
         <div class="row mb-5">
@@ -502,10 +471,6 @@
         </div>
     </section>
 
-    
-    
-    
-
     <section class="site-section" id="blog-section">
       <div class="container">
         <div class="row mb-5">
@@ -546,10 +511,6 @@
         </div>
       </div>
     </section>
-
-   
-
-
     <section class="site-section bg-light" id="contact-section">
       <div class="container">
         <div class="row mb-5">
@@ -627,10 +588,10 @@
           </div>
           
       </div>
-    </section>
+    </section> --}}
 
     
-    <footer class="site-footer">
+    {{-- <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
@@ -690,7 +651,7 @@
           
         </div>
       </div>
-    </footer>
+    </footer> --}}
 
   </div> <!-- .site-wrap -->
 

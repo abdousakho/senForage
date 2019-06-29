@@ -47,6 +47,7 @@ class FactureController extends Controller
     public function show(Facture $facture)
     {
         //
+        return view("factures.show")
     }
 
     /**

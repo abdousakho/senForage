@@ -82,3 +82,7 @@ Route::get('loginfor/{rolename?}',function($rolename=null){
  
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
